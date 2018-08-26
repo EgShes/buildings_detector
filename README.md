@@ -56,6 +56,8 @@ All the result masks are in results folder.
 
 The weights are orginized as the results of experiments.
 
+Weights are available [here](https://drive.google.com/drive/folders/1_wiA3oCFrj7bAM-O3-EQdKDbnWwYDFaM?usp=sharing).
+
 ### 1 Experiment (first architecture)
 
 * **a** 30 epoch, dice 0.22

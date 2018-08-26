@@ -10,6 +10,8 @@ The data is 3 channels (RGB) 650\*650 .tif images. Each image has a pair as geoj
 ## Description of the problem solutioning
 (all the process of work is in Buildings_detection.npynb)
 
+Technologies: keras with thensorflow as backend
+
 As this is a segmentation problem the U-net architecture was choosen.
 
 ![U-net Neural Net Structure](https://github.com/EgShes/buildings_detector/tree/master/img/u-net.png "U-net Neural Net Structure")
@@ -57,6 +59,8 @@ All the result masks are in results folder.
 The weights are orginized as the results of experiments.
 
 Weights are available [here](https://drive.google.com/drive/folders/1_wiA3oCFrj7bAM-O3-EQdKDbnWwYDFaM?usp=sharing).
+
+Preprocessed data is avalable [here](https://drive.google.com/open?id=1-WSLeKDCf5T52WD7NiMgu9siIr2O82UJ)
 
 ### 1 Experiment (first architecture)
 

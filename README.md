@@ -28,8 +28,11 @@ All the data was prerocessed with mask_tiff.py and data_processing.py before loa
 ### First architecture
 First U-net was too narrow. It even could not predict. The best dice_coeff was about 0.40. Data contained too mach images without any buildings at them.
 
+Was a lot of useless attempts because of narrowness of the net.
+
+
 ### Second architecture
-**A**
+**A** attempt
 
 I used an U-net implamentation of [ZFTutbo](https://github.com/ZFTurbo). 
 
@@ -39,7 +42,7 @@ But as I knew after training the absance of images with no buildings at them is 
 
 During training the best dice coeff was about 0.69. On test set it was 0.33.
 
-**B**
+**B** attempt
 
 For this attempt train and val data contained about 15% of images with no houses.
 
@@ -48,3 +51,23 @@ During training best val dice coeff was less under 0.70
 The result was really good. On test set dice coeff was 0.62. 
 
 All the result masks are in results folder.
+
+## Experiments and Weights
+
+The weights are orginized as the results of experiments.
+
+### 1 Experiment (first architecture)
+
+* **a** 30 epoch, dice 0.22
+* **b** 25 epoch, dice 0.266
+* **c** 25 epoch, minor changes in net (found typo mistakes in number of features)
+
+### 2 Experiment (first architecture)
+
+* **a** 0 nobuilding images, 15 epochs, batch=32, dice = 0.30
+* **b** 0 nobuilding images, 30 epochs, batch=16, lr = 0.001, added LRReduceOnPlatau dice = same
+
+### 3 Experiment (second architecture)
+
+* **a** 0 nobuilding, net is good, dice = 0.68, mistakes on forests and crops (nobuildings areas) test dice = 0.33
+* **b** 15% of nobuildings, success, dice = 0.70, test dice = 0.63, result test masks in result folder
